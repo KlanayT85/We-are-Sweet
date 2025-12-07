@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>We Are Sweet — Menu</title>
+  <meta name="description" content="Bakery menu for We Are Sweet — cookies, cakes, and pastries." />
+
+  <style>
+    :root{
+      --bg:#fff8f2;
+      --card:#fff;
+      --accent:#c96f4c;
+      --muted:#6b6b6b;
+      --radius:10px;
+      --max-width:1000px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fff8f2 0%, #fff 60%);
+      color:#222;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .menu{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(0,0,0,0.07);
+      overflow:hidden;
+    }
+
+    header{
+      padding:28px 32px;
+      background:linear-gradient(90deg, rgba(201,111,76,0.05), rgba(201,111,76,0.02));
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .logo{
+      width:64px;
+      height:64px;
+      border-radius:12px;
+      background:var(--accent);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:20px;
+      box-shadow:0 6px 18px rgba(201,111,76,0.18);
+    }
+
+    header h1{margin:0;font-size:20px}
+    header p{margin:0;color:var(--muted);font-size:14px}
+
+    main{
+      padding:28px 32px;
+      display:grid;
+      gap:22px;
+    }
+
+    .section{
+      display:grid;
+      gap:12px;
+    }
+
+    .section > h2{
+      margin:0;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:18px;
+      color:var(--accent);
+    }
+
+    .items{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+    }
+
+    .item{
+      background:#fff;
+      border-radius:10px;
+      padding:12px;
+      border:1px solid rgba(0,0,0,0.03);
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .thumb{
+      width:72px;
+      height:72px;
+      border-radius:8px;
+      background:linear-gradient(135deg,#fdebd6,#fff1e8);
+      flex:0 0 72px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent);
+      font-weight:700;
+      font-size:13px;
+      text-align:center;
+      padding:6px;
+    }
+
+    .meta{
+      flex:1;
+    }
+
+    .meta h3{margin:0;font-size:15px}
+    .meta p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+    .price{
+      font-weight:700;
+      color:#111;
+      font-size:14px;
+      margin-left:auto;
+    }
+
+    .item-row{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    footer{
+      padding:16px 32px;
+      background:linear-gradient(90deg, rgba(0,0,0,0.02), transparent);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:520px){
+      header{padding:18px}
+      main{padding:18px}
+      footer{padding:12px 18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="menu" role="application" aria-labelledby="menu-title">
+    <header>
+      <div class="logo" aria-hidden="true">WS</div>
+      <div>
+        <h1 id="menu-title">We Are Sweet — Bakery Menu</h1>
+        <p>Freshly baked daily — cookies, cakes & pastries</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section 1: Cookies (3 items) -->
+      <section class="section" aria-labelledby="cookies-heading">
+        <h2 id="cookies-heading">Cookies</h2>
+        <div class="items" role="list">
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🍪</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Chocolate Chip</h3>
+                <div class="price">$4.50</div>
+              </div>
+              <p>Classic buttery cookie loaded with semi-sweet chocolate chips. (Contains: wheat, dairy)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🌾</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Oatmeal Raisin</h3>
+                <div class="price">$4.50</div>
+              </div>
+              <p>Soft oats with plump raisins and warm cinnamon notes. (Contains: wheat)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🍫</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Chocolate Stuffed Peanut Butter Cookie</h3>
+                <div class="price">$4.50</div>
+              </div>
+              <p>Rich peanut butter dough with milk chocolate feeling for extra indulgence. (Contains: wheat, dairy, nuts)</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 2: Cakes (4 items) -->
+      <section class="section" aria-labelledby="cakes-heading">
+        <h2 id="cakes-heading">Cakes</h2>
+        <div class="items" role="list">
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🎂</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Vanilla Layer Cake</h3>
+                <div class="price">$8.50 / slice</div>
+              </div>
+              <p>Light vanilla sponge with vanilla buttercream and rasberry feeling in between the layers. (Contains: wheat, eggs, dairy)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🍫</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Chocolate Fudge expresso Cake</h3>
+                <div class="price">$8.50 / slice</div>
+              </div>
+              <p>Moist chocolate cake with a rich fudge frosting topped with expresso crunch. (Contains: wheat, dairy, eggs)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🍋</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Lemon Drizzle Cheesecake</h3>
+                <div class="price">$8.50 / slice</div>
+              </div>
+              <p>Zesty lemon cheesecake with a citrus lavender syrup for brightness. (Contains: wheat, eggs)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🥕</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Carrot Walnut</h3>
+                <div class="price">$8.50 / slice</div>
+              </div>
+              <p>Spiced carrot cake with chopped walnuts and cream cheese frosting. (Contains: wheat, nuts, dairy, eggs)</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 3: Pastries (3 items) -->
+      <section class="section" aria-labelledby="pastries-heading">
+        <h2 id="pastries-heading">Pastries</h2>
+        <div class="items" role="list">
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🥐</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Almond Croissant</h3>
+                <div class="price">$3.25</div>
+              </div>
+              <p>Buttery, flaky croissant filled with almond paste and topped with sliced almonds. (Contains: nuts, dairy)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🍓</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Fruit Danish</h3>
+                <div class="price">$3.25</div>
+              </div>
+              <p>Light pastry filled with pastry cream and seasonal fruit. (Contains: dairy, eggs)</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem">
+            <div class="thumb" aria-hidden="true">🌀</div>
+            <div class="meta">
+              <div class="item-row">
+                <h3>Cinnamon Roll</h3>
+                <div class="price">$3.25</div>
+              </div>
+              <p>Soft, gooey roll with cinnamon-sugar swirl and vanilla glaze. (Contains: wheat, dairy)</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>We Are Sweet — Fresh daily. Ask our staff for allergen information.</div>
+    </footer>
+  </div>
+</body>
+</html>
