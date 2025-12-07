@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — We Are Sweet</title>
+  <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+  <main class="card" aria-labelledby="contact-title">
+    <h1 id="contact-title">Contact Us</h1>
+    <p class="lead">Have a question, order, or catering request? Fill out the form below and we'll get back to you.</p>
+
+    <form id="contactForm" method="post" action="#" novalidate>
+      <div class="row">
+        <div>
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Jane Doe" required />
+        </div>
+
+        <div>
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" placeholder="+1 (555) 555-1234"
+                 pattern="^\+?[0-9\s\-\(\)]{7,20}$"
+                 title="Enter a valid phone number, e.g. +1 (555) 555-1234" />
+        </div>
+      </div>
+
+      <div>
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" placeholder="123 Sweet St, Suite 4" />
+      </div>
+
+      <div>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+      </div>
+
+      <fieldset style="border:none;padding:0;margin:0">
+        <legend style="font-weight:600;margin-bottom:8px">Options</legend>
+        <div class="checkboxes" role="group" aria-label="Service options">
+          <label>
+            <input type="checkbox" id="subscriber" name="options" value="subscriber" />
+            Subscribe to newsletter
+          </label>
+
+          <label>
+            <input type="checkbox" id="catering" name="options" value="catering" />
+            Catering
+          </label>
+
+          <label>
+            <input type="checkbox" id="special" name="options" value="special-orders" />
+            Special orders
+          </label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="comments">Comments / Message</label>
+        <textarea id="comments" name="comments" placeholder="Tell us about your request, preferred date, quantities, or dietary restrictions..."></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Submit</button>
+        <div class="note">We'll reply to the email you provide. Required fields are marked.</div>
+      </div>
+
+      <div id="successMsg" class="success" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script>
+    (function(){
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('successMsg');
+
+      function gatherFormData(f){
+        const fd = new FormData(f);
+        // collect checked options (multiple checkboxes share the same name)
+        const options = Array.from(f.querySelectorAll('input[type="checkbox"][name="options"]:checked')).map(i => i.value);
+        const data = {
+          fullname: fd.get('fullname') || '',
+          address: fd.get('address') || '',
+          phone: fd.get('phone') || '',
+          email: fd.get('email') || '',
+          options: options,
+          comments: fd.get('comments') || ''
+        };
+        return data;
+      }
+
+      form.addEventListener('submit', function(evt){
+        evt.preventDefault();
+        success.style.display = 'none';
+        // Basic HTML5 validity check
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const payload = gatherFormData(form);
+
+        // For now we simulate a submit. Replace this with a real fetch() to your server endpoint.
+        console.log('Form would be submitted:', payload);
+
+        success.textContent = 'Thanks, ' + (payload.fullname || 'there') + '! Your message has been received. We will contact you shortly.';
+        success.style.display = 'block';
+
+        // Optionally clear or keep form fields:
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
