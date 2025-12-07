@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subscription Plans — Semi Sweet & Sweet</title>
+  <meta name="description" content="Choose between the Semi Sweet monthly subscription ($19.99/mo) and the Sweet monthly subscription ($35/mo)." />
+
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#7c3aed;
+      --accent-2:#ef4444;
+      --radius:12px;
+      --max-width:1000px;
+      --gap:20px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f3f4f6, #fafafa 60%);
+      color:#0f172a;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 16px;
+      min-height:100vh;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+    header{margin-bottom:28px;text-align:center}
+    h1{margin:0;font-size:1.5rem}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+
+    .plans{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+      border:1px solid rgba(15,23,42,0.04);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .card .header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .plan-name{font-weight:700;font-size:1.1rem}
+    .price{
+      font-weight:800;
+      font-size:1.35rem;
+      color:var(--accent);
+    }
+    .price small{font-weight:600;color:var(--muted);font-size:0.85rem;margin-left:6px}
+
+    .features{
+      margin:8px 0 0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .features li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:#0f172a;
+      font-size:0.95rem;
+    }
+    .features svg{flex:0 0 20px;color:var(--accent)}
+
+    .cta{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:0.95rem;
+      border:0;
+      cursor:pointer;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,var(--accent),#5b21b6);
+      color:#fff;
+      box-shadow:0 6px 18px rgba(124,58,237,0.18);
+    }
+    .btn-secondary{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(15,23,42,0.06);
+    }
+
+    .recommended{
+      display:inline-block;
+      background:#fff7ed;
+      color:var(--accent-2);
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:700;
+      font-size:0.8rem;
+      border:1px solid rgba(239,68,68,0.08);
+    }
+
+    footer{margin-top:18px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    @media (max-width:420px){
+      body{padding:28px 12px}
+      .price{font-size:1.2rem}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" id="main">
+    <header role="banner" aria-labelledby="plans-heading">
+      <h1 id="plans-heading">Choose a subscription plan</h1>
+      <p class="lead">Monthly plans — cancel anytime.</p>
+    </header>
+
+    <section class="plans" role="list" aria-label="Subscription plans">
+      <!-- Semi Sweet Plan -->
+      <article class="card" role="listitem" aria-labelledby="semi-title">
+        <div class="header">
+          <div>
+            <div id="semi-title" class="plan-name">Semi Sweet</div>
+            <div class="price" aria-hidden="true">
+              $19.99<span><small>/month</small></span>
+            </div>
+            <div class="sr-only" style="position:absolute;left:-9999px">Semi Sweet subscription — $19.99 per month</div>
+          </div>
+          <div aria-hidden="true">
+            <!-- simple decorative SVG -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect width="24" height="24" rx="6" fill="#f3f4f6"/>
+              <path d="M7 12h10M7 8h10M7 16h6" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <p style="margin:0;color:var(--muted);font-size:0.95rem">Perfect starter plan for casual users.</p>
+
+        <ul class="features" aria-label="Semi Sweet features">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>2 free "Sweet of the Week" items per month</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 free coffee, hot tea, or soft drink per day</li>
+        </ul>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#" role="button" aria-label="Select Semi Sweet plan for $19.99 per month">Select — $19.99/mo</a>
+          <a class="btn btn-secondary" href="#" role="button" aria-label="Learn more about Semi Sweet">Learn more</a>
+        </div>
+      </article>
+
+      <!-- Sweet Plan -->
+      <article class="card" role="listitem" aria-labelledby="sweet-title">
+        <div class="header">
+          <div>
+            <div id="sweet-title" class="plan-name">Sweet <span class="recommended" aria-hidden="true">Recommended</span></div>
+            <div class="price" aria-hidden="true">
+              $35<span><small>/month</small></span>
+            </div>
+            <div class="sr-only" style="position:absolute;left:-9999px">Sweet subscription — $35 per month</div>
+          </div>
+          <div aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect width="24" height="24" rx="6" fill="#fff7ed"/>
+              <path d="M7 12h10M7 8h10M7 16h6" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <p style="margin:0;color:var(--muted);font-size:0.95rem">Advanced plan with extra benefits for power users.</p>
+
+        <ul class="features" aria-label="Sweet features">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>4 free "Sweet of the Week" items per month</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 free coffee, hot tea, or soft drink per day</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 free treat (not the Sweet of the Week) from the menu</li>
+        </ul>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#" role="button" aria-label="Select Sweet plan for $35 per month">Select — $35/mo</a>
+          <a class="btn btn-secondary" href="#" role="button" aria-label="Compare Sweet plan">Compare</a>
+        </div>
+      </article>
+    </section>
+
+    <footer aria-live="polite">
+      Prices shown are in USD. Taxes and fees may apply.
+    </footer>
+  </main>
+
+  <script>
+    // Small script to demonstrate selecting a plan and reading data (progressive enhancement).
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('.btn-primary');
+      if(!btn) return;
+      e.preventDefault();
+      // In a real integration you'd navigate to checkout or open a modal.
+      const planText = btn.textContent.trim();
+      alert('You selected: ' + planText);
+    });
+  </script>
+</body>
+</html>
