@@ -9,6 +9,11 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Hero banner: full-width image at the top of the page -->
+  <div class="hero-banner" role="img" aria-label="Bakery display banner showing pastries">
+    <img src="assets/banner.jpg" alt="Bakery display with an assortment of pastries and baked goods" class="hero-image" />
+  </div>
+
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#" aria-label="We are Sweet home">
@@ -40,7 +45,14 @@
     <section id="sweet-of-week" class="section wrap" aria-labelledby="sotw-title">
       <h2 id="sotw-title">Sweet of the Week</h2>
       <div class="sotw-card">
-        <img src="" alt="Sweet of the week photo (replace this src)" class="sotw-image" />
+        <figure>
+          <img src="assets/sweet-of-week.jpg"
+               alt="Slice of cheesecake with strawberry sauce dripping down and granola crumble on top"
+               class="sotw-image"
+               width="800"
+               height="1200" />
+          <figcaption class="sotw-caption">Strawberry cheesecake — Sweet of the Week</figcaption>
+        </figure>
         <div class="sotw-body">
           <h3 class="sotw-name">[Sweet Name]</h3>
           <p class="sotw-desc">A rich and creamy cheesecake made with cream from a local dairy farmer. Topped with sweet strawberry syrup and finished with a crunchy honey-granola

@@ -1,0 +1,30 @@
+/* Add these rules to styles.css (append or merge) to style the banner responsively */
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  background: #fff; /* fallback */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.hero-banner .hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  max-height: 420px; /* adjust as desired */
+}
+
+/* Small screens: increase banner height for portrait images */
+@media (max-width: 480px) {
+  .hero-banner .hero-image {
+    max-height: 520px;
+  }
+}
+
+/* Optional: keep page content from being hidden under the banner on very tall banners */
+.wrap.header-inner {
+  position: relative;
+  z-index: 2;
+}
