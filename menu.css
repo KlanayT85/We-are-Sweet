@@ -1,140 +1,203 @@
- <style>
-    :root{
-      --bg:#fff8f2;
-      --card:#fff;
-      --accent:#c96f4c;
-      --muted:#6b6b6b;
-      --radius:10px;
-      --max-width:1000px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
+ /* ------------------------------
+   GLOBAL STYLES
+--------------------------------*/
+:root {
+  --bg: #faf9f7;
+  --text: #2d2d2d;
+  --muted: #7a7a7a;
+  --accent: #d46b7a;
+  --card: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 16px rgba(0,0,0,0.08);
+  --max-width: 1000px;
 
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,#fff8f2 0%, #fff 60%);
-      color:#222;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-    }
+  font-family: "Inter", system-ui, Arial, sans-serif;
+}
 
-    .menu{
-      width:100%;
-      max-width:var(--max-width);
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:0 8px 30px rgba(0,0,0,0.07);
-      overflow:hidden;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
 
-    header{
-      padding:28px 32px;
-      background:linear-gradient(90deg, rgba(201,111,76,0.05), rgba(201,111,76,0.02));
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
+/* ------------------------------
+   HERO IMAGE
+--------------------------------*/
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+}
 
-    .logo{
-      width:64px;
-      height:64px;
-      border-radius:12px;
-      background:var(--accent);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-weight:700;
-      font-size:20px;
-      box-shadow:0 6px 18px rgba(201,111,76,0.18);
-    }
+.hero-banner img.hero-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
 
-    header h1{margin:0;font-size:20px}
-    header p{margin:0;color:var(--muted);font-size:14px}
+/* ------------------------------
+   MAIN MENU CONTAINER
+--------------------------------*/
+.menu {
+  background: var(--card);
+  max-width: var(--max-width);
+  margin: -40px auto 40px;
+  padding: 40px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 
-    main{
-      padding:28px 32px;
-      display:grid;
-      gap:22px;
-    }
+/* ------------------------------
+   HEADER
+--------------------------------*/
+.menu header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
 
-    .section{
-      display:grid;
-      gap:12px;
-    }
+.menu header .logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .section > h2{
-      margin:0;
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-size:18px;
-      color:var(--accent);
-    }
+.menu header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
 
-    .items{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:14px;
-    }
+.menu header p {
+  margin: 2px 0 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
-    .item{
-      background:#fff;
-      border-radius:10px;
-      padding:12px;
-      border:1px solid rgba(0,0,0,0.03);
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-    }
+/* ------------------------------
+   SECTION HEADINGS
+--------------------------------*/
+.section {
+  margin-bottom: 40px;
+}
 
-    .thumb{
-      width:72px;
-      height:72px;
-      border-radius:8px;
-      background:linear-gradient(135deg,#fdebd6,#fff1e8);
-      flex:0 0 72px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--accent);
-      font-weight:700;
-      font-size:13px;
-      text-align:center;
-      padding:6px;
-    }
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border-left: 6px solid var(--accent);
+  padding-left: 12px;
+}
 
-    .meta{
-      flex:1;
-    }
+/* ------------------------------
+   ITEM LIST
+--------------------------------*/
+.items,
+.section > article.item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .meta h3{margin:0;font-size:15px}
-    .meta p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
-    .price{
-      font-weight:700;
-      color:#111;
-      font-size:14px;
-      margin-left:auto;
-    }
+.item {
+  display: flex;
+  gap: 16px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
 
-    .item-row{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-    }
+.item:hover {
+  background: #fff7f8;
+  transition: 0.25s ease;
+}
 
-    footer{
-      padding:16px 32px;
-      background:linear-gradient(90deg, rgba(0,0,0,0.02), transparent);
-      color:var(--muted);
-      font-size:13px;
-    }
+/* ------------------------------
+   THUMBNAIL IMAGE
+--------------------------------*/
+.thumb img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 2px solid #f0e6e8;
+}
 
-    @media (max-width:520px){
-      header{padding:18px}
-      main{padding:18px}
-      footer{padding:12px 18px}
-    }
-  </style>
+/* ------------------------------
+   ITEM TEXT / DETAILS
+--------------------------------*/
+.meta {
+  flex: 1;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-row h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.item p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+/* ------------------------------
+   RESPONSIVE STYLES
+--------------------------------*/
+@media (max-width: 700px) {
+  .menu {
+    padding: 24px 16px;
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .item-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .price {
+    margin-top: 4px;
+  }
+}
