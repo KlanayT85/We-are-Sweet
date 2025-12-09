@@ -1,0 +1,105 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff8f2;
+  color: #333;
+  line-height: 1.6;
+
+  /* Centering setup */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero banner */
+.hero-banner .hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header */
+.site-header {
+  background-color: #fff;
+  border-bottom: 2px solid #f2d5c4;
+  padding: 0.5rem 1rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #a0522d;
+}
+
+.primary-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary-nav .nav-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-nav .nav-btn:hover {
+  background-color: #f2d5c4;
+  color: #000;
+}
+
+/* Center the card (form container) */
+.card {
+  flex: 1; /* take available space */
+  max-width: 600px;
+  margin: 2rem auto; /* center horizontally */
+  background-color: #fff;
+  border: 1px solid #f2d5c4;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically inside */
+}
+
+/* Headings */
+.card h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #a0522d;
+}
+
+.lead {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Form layout */
+form .row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+form .row > div {
+  flex: 1;
+}
+
+form label {
+  display: block
