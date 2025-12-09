@@ -1,4 +1,3 @@
-
 /* Reset */
 * {
   margin: 0;
@@ -103,4 +102,87 @@ form .row > div {
 }
 
 form label {
-  display: block
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #a0522d;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(160,82,45,0.2);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Checkboxes */
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkboxes label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Actions */
+.actions {
+  margin-top: 1rem;
+}
+
+.actions button {
+  background-color: #a0522d;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #7a3f1d;
+}
+
+.actions .note {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Success message */
+.success {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #e6ffed;
+  border: 1px solid #b2f5ea;
+  border-radius: 4px;
+  color: #065f46;
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form .row {
+    flex-direction: column;
+  }
+}
