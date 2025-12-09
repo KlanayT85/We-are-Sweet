@@ -1,273 +1,197 @@
- /* ------------------------------
-   GLOBAL STYLES
---------------------------------*/
-:root {
-  --bg: #faf9f7;
-  --text: #2d2d2d;
-  --muted: #7a7a7a;
-  --accent: #d46b7a;
-  --card: #ffffff;
-  --radius: 14px;
-  --shadow: 0 6px 16px rgba(0,0,0,0.08);
-  --max-width: 1000px;
-
-  font-family: "Inter", system-ui, Arial, sans-serif;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff8f2;
+  color: #333;
 }
 
-/* ------------------------------
-   HERO IMAGE
---------------------------------*/
+/* Hero banner */
 .hero-banner {
   width: 100%;
   overflow: hidden;
 }
 
-.hero-banner img.hero-image {
+.hero-banner .hero-image {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
-/* ------------------------------
- HEADER FOR NAVAGATION BUTTONS
--------------------------------*/
+/* Header */
 .site-header {
-  background: #ffe6ec;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background-color: #fff;
+  border-bottom: 2px solid #f2d5c4;
+  padding: 0.5rem 1rem;
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .brand {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #d14a69;
-  font-size: 1.4rem;
-  font-weight: 700;
+  color: #333;
 }
 
-.brand-logo {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
+.brand img {
+  height: 40px;
+  margin-right: 0.5rem;
 }
 
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #a0522d;
+}
+
+/* Navigation */
 .primary-nav {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
-.nav-btn {
-  background: none;
-  border: 2px solid transparent;
-  padding: .5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-  color: #444;
+.primary-nav .nav-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-btn:hover {
-  background: #ffd6df;
-  border-color: #ffb4c6;
+.primary-nav .nav-btn:hover {
+  background-color: #f2d5c4;
+  color: #000;
 }
 
-.accent {
-  background: #ff82a3;
-  color: white;
-  border-color: #ff82a3;
-}
-
-.accent:hover {
-  background: #e06a8a;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-
-/* ------------------------------
-   MAIN MENU CONTAINER
---------------------------------*/
+/* Menu container */
 .menu {
-  background: var(--card);
-  max-width: var(--max-width);
-  margin: -40px auto 40px;
-  padding: 40px 24px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-/* ------------------------------
-   HEADER
---------------------------------*/
 .menu header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 28px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.menu header .logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  font-size: 1.6rem;
+.menu .logo {
+  font-size: 2rem;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #a0522d;
 }
 
-.menu header h1 {
-  margin: 0;
-  font-size: 1.6rem;
+.menu h1 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  color: #333;
 }
 
-.menu header p {
-  margin: 2px 0 0 0;
-  color: var(--muted);
-  font-size: 0.9rem;
+.menu p {
+  color: #555;
 }
 
-/* ------------------------------
-   SECTION HEADINGS
---------------------------------*/
+/* Sections */
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 16px;
-  border-left: 6px solid var(--accent);
-  padding-left: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f2d5c4;
+  padding-bottom: 0.25rem;
+  color: #a0522d;
 }
 
-/* ------------------------------
-   ITEM LIST
---------------------------------*/
+/* Items */
 .items,
-.section > article.item {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .item {
-  display: flex;
-  gap: 16px;
-  background: #ffffff;
-  padding: 18px;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background-color: #fff;
+  border: 1px solid #f2d5c4;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .item:hover {
-  background: #fff7f8;
-  transition: 0.25s ease;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* ------------------------------
-   THUMBNAIL IMAGE
---------------------------------*/
 .thumb img {
-  width: 110px;
-  height: 110px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
-  border-radius: var(--radius);
-  border: 2px solid #f0e6e8;
 }
 
-/* ------------------------------
-   ITEM TEXT / DETAILS
---------------------------------*/
 .meta {
-  flex: 1;
+  padding: 1rem;
 }
 
 .item-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
 }
 
 .item-row h3 {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
 }
 
 .price {
-  font-size: 1.1rem;
   font-weight: bold;
-  color: var(--accent);
+  color: #a0522d;
 }
 
-.item p {
-  margin-top: 8px;
-  color: var(--muted);
+.meta p {
   font-size: 0.9rem;
-  line-height: 1.4;
+  color: #555;
 }
 
-/* ------------------------------
-   FOOTER
---------------------------------*/
+/* Footer */
 footer {
-  margin-top: 40px;
-  padding-top: 16px;
-  font-size: 0.85rem;
-  color: var(--muted);
+  background-color: #f2d5c4;
   text-align: center;
-  border-top: 1px solid #eee;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 2rem;
 }
 
-/* ------------------------------
-   RESPONSIVE STYLES
---------------------------------*/
-@media (max-width: 700px) {
-  .menu {
-    padding: 24px 16px;
-  }
-
-  .item {
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .primary-nav {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .thumb img {
-    width: 100%;
-    height: 180px;
+    gap: 0.5rem;
   }
 
   .item-row {
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-start;
   }
 
   .price {
-    margin-top: 4px;
+    margin-top: 0.25rem;
   }
 }
