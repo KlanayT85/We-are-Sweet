@@ -1,292 +1,193 @@
-/*-------------------------------
-   Global Styles
------------------------------- */
-
+/* Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff8f2;
   color: #333;
-  background-color: #fff8f6;
+  line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
+/* Hero banner */
+.hero-banner .hero-image {
+  width: 100%;
   height: auto;
   display: block;
 }
 
-.wrap {
-  width: min(90%, 1200px);
-  margin: 0 auto;
-}
-
-/* ------------------------------
-   Hero Banner
------------------------------- */
-.hero-banner {
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-banner .hero-image {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-bottom: 4px solid #f7a8b8;
-}
-
-/* ------------------------------
-   Header / Navigation
------------------------------- */
+/* Header */
 .site-header {
-  background: #ffe6ec;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background-color: #fff;
+  border-bottom: 2px solid #f2d5c4;
+  padding: 0.5rem 1rem;
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #d14a69;
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.brand-logo {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #a0522d;
 }
 
 .primary-nav {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
-.nav-btn {
-  background: none;
-  border: 2px solid transparent;
-  padding: .5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-  color: #444;
+.primary-nav .nav-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-btn:hover {
-  background: #ffd6df;
-  border-color: #ffb4c6;
+.primary-nav .nav-btn:hover {
+  background-color: #f2d5c4;
+  color: #000;
 }
 
-.accent {
-  background: #ff82a3;
-  color: white;
-  border-color: #ff82a3;
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-.accent:hover {
-  background: #e06a8a;
+.lead {
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-.nav-toggle {
-  display: none;
+/* Plans table */
+.plans {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
 }
 
-<style>
-    :root{
-      --bg:#f7fafc;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#7c3aed;
-      --accent-2:#ef4444;
-      --table-border:#e6edf3;
-      --radius:10px;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      color:#0f172a;
-    }
+.card {
+  display: table-cell;
+  vertical-align: top;
+  border: 1px solid #f2d5c4;
+  padding: 1rem;
+  background-color: #fff;
+  width: 50%;
+}
 
-    body{
-      margin:0;
-      background:linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-    }
+.card + .card {
+  border-left: none;
+}
 
-    .container{
-      width:100%;
-      max-width:980px;
-    }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
-    header{
-      text-align:left;
-      margin-bottom:18px;
-    }
+.plan-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #a0522d;
+}
 
-    header h1{
-      margin:0 0 6px 0;
-      font-size:1.6rem;
-      letter-spacing:-0.2px;
-    }
-    header p{
-      margin:0;
-      color:var(--muted);
-      font-size:0.95rem;
-    }
+.recommended {
+  background-color: #f97316;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
 
-    .table-wrap{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:0 6px 18px rgba(15,23,42,0.06);
-      padding:18px;
-      border:1px solid var(--table-border);
-      overflow-x:auto;
-    }
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
 
-    table{
-      width:100%;
-      border-collapse:separate;
-      border-spacing:0;
-      min-width:680px;
-    }
+.features {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
 
-    thead th{
-      text-align:left;
-      padding:14px 16px;
-      font-weight:600;
-      font-size:0.95rem;
-      color:var(--muted);
-      border-bottom:1px dashed #e9eef4;
-    }
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
 
-    tbody td{
-      padding:18px 16px;
-      vertical-align:middle;
-      border-bottom:1px solid #f1f5f9;
-    }
+.features svg {
+  margin-right: 0.5rem;
+  color: #a0522d;
+}
 
-    /* First column: plan title */
-    .plan-cell{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .plan-badge{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:10px;
-      font-weight:700;
-      color:white;
-      background:linear-gradient(90deg,var(--accent),#5b21b6);
-      font-size:0.95rem;
-      box-shadow:0 3px 10px rgba(124,58,237,0.14);
-    }
-    .plan-name{
-      font-size:1rem;
-      font-weight:700;
-    }
-    .plan-sub{
-      display:block;
-      font-size:0.85rem;
-      color:var(--muted);
-      margin-top:4px;
-    }
+/* Buttons */
+.cta {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
 
-    .price{
-      font-weight:800;
-      font-size:1.15rem;
-    }
-    .per{
-      display:block;
-      font-weight:600;
-      font-size:0.85rem;
-      color:var(--muted);
-      margin-top:6px;
-    }
+.btn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
 
-    ul.features{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-    ul.features li{
-      margin-bottom:8px;
-      line-height:1.35;
-    }
+.btn-primary {
+  background-color: #a0522d;
+  color: #fff;
+}
 
-    .cta-cell{
-      text-align:right;
-      white-space:nowrap;
-    }
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:8px;
-      font-weight:700;
-      color:white;
-      text-decoration:none;
-      cursor:pointer;
-      border:0;
-      transition:transform .12s ease, box-shadow .12s ease;
-    }
-    .btn:active{ transform:translateY(1px); }
-    .btn-primary{
-      background:linear-gradient(90deg,var(--accent),#4f46e5);
-      box-shadow:0 8px 24px rgba(79,70,229,0.12);
-    }
-    .btn-outline{
-      background:transparent;
-      border:1px solid #e6edf3;
-      color:var(--muted);
-      padding:9px 12px;
-      margin-right:10px;
-    }
+.btn-primary:hover {
+  background-color: #7a3f1d;
+}
 
-    /* Highlight the recommended plan */
-    .recommended{
-      background:linear-gradient(180deg, rgba(124,58,237,0.06), rgba(124,58,237,0.02));
-      border-radius:8px;
-    }
+.btn-secondary {
+  background-color: #f2d5c4;
+  color: #333;
+}
 
-    /* Responsive: stack rows on narrow screens while preserving "table" appearance */
-    @media (max-width:740px){
-      table{ min-width:100%; }
-      thead{ display:none; }
-      tbody td{
-        display:block;
-        padding:12px 12px;
-        border-bottom:1px solid rgba(2,6,23,0.04);
-      }
-      tbody td::before{
-        content: attr(data-label);
-        display:block;
-        font-weight:700;
-        color:var(--muted);
-        margin-bottom:8px;
-        font-size:0.9rem;
-      }
-      .cta-cell{ text-align:left; margin-top:6px; }
-      .plan-badge{ padding:6px 10px; font-size:0.85rem; }
-    }
+.btn-secondary:hover {
+  background-color: #e0bfa9;
+}
 
-    /* small
+/* Footer */
+footer {
+  background-color: #f2d5c4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plans {
+    display: block;
+  }
+  .card {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-left: 1px solid #f2d5c4;
+  }
+}
