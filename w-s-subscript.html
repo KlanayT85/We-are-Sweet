@@ -37,70 +37,37 @@
     </header>
 
     <section class="plans" role="list" aria-label="Subscription plans">
-      <!-- Semi Sweet Plan -->
-      <article class="card" role="listitem" aria-labelledby="semi-title">
-        <div class="header">
-          <div>
-            <div id="semi-title" class="plan-name">Semi Sweet</div>
-            <div class="price" aria-hidden="true">
-              $19.99<span><small>/month</small></span>
-            </div>
-            <div class="sr-only" style="position:absolute;left:-9999px">Semi Sweet subscription — $19.99 per month</div>
-          </div>
-          <div aria-hidden="true">
-            <!-- simple decorative SVG -->
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" rx="6" fill="#f3f4f6"/>
-              <path d="M7 12h10M7 8h10M7 16h6" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-
-        <p style="margin:0;color:var(--muted);font-size:0.95rem">Perfect starter plan for casual users.</p>
-
-        <ul class="features" aria-label="Semi Sweet features">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>2 free "Sweet of the Week" items per month</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 free coffee, hot tea, or soft drink per day</li>
-        </ul>
-
-        <div class="cta">
-          <a class="btn btn-primary" href="#" role="button" aria-label="Select Semi Sweet plan for $19.99 per month">Select — $19.99/mo</a>
-          <a class="btn btn-secondary" href="#" role="button" aria-label="Learn more about Semi Sweet">Learn more</a>
-        </div>
-      </article>
-
-      <!-- Sweet Plan -->
-      <article class="card" role="listitem" aria-labelledby="sweet-title">
-        <div class="header">
-          <div>
-            <div id="sweet-title" class="plan-name">Sweet <span class="recommended" aria-hidden="true">Recommended</span></div>
-            <div class="price" aria-hidden="true">
-              $35<span><small>/month</small></span>
-            </div>
-            <div class="sr-only" style="position:absolute;left:-9999px">Sweet subscription — $35 per month</div>
-          </div>
-          <div aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" rx="6" fill="#fff7ed"/>
-              <path d="M7 12h10M7 8h10M7 16h6" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-
-        <p style="margin:0;color:var(--muted);font-size:0.95rem">Advanced plan with extra benefits for power users.</p>
-
-        <ul class="features" aria-label="Sweet features">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>4 free "Sweet of the Week" items per month</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 free coffee, hot tea, or soft drink per day</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 free treat (not the Sweet of the Week) from the menu</li>
-        </ul>
-
-        <div class="cta">
-          <a class="btn btn-primary" href="#" role="button" aria-label="Select Sweet plan for $35 per month">Select — $35/mo</a>
-          <a class="btn btn-secondary" href="#" role="button" aria-label="Compare Sweet plan">Compare</a>
-        </div>
-      </article>
-    </section>
+     <table class="plans-table">
+       <thead>
+         <tr>
+            <th>Features</th>
+            <th>Semi Sweet<br><span class="price">$19.99/mo</span></th>
+            <th>Sweet<br><span class="price">$35/mo</span></th>
+        </tr>
+      </thead>
+       <tbody>
+         <tr>
+           <td>“Sweet of the Week” items</td>
+           <td>2 per month</td>
+           <td>4 per month</td>
+        </tr>
+        <tr>
+          <td>Free drink daily</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Extra treat</td>
+          <td>—</td>
+          <td>✔</td>
+       </tr>
+       <tr>
+          <td></td>
+          <td><a class="btn btn-primary" href="#">Select $19.99</a></td>
+          <td><a class="btn btn-primary" href="#">Select $35</a></td>
+        </tr>
+      </tbody>
+      </table>
 
     <footer aria-live="polite">
       Prices shown are in USD. Taxes and fees may apply.
