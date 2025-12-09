@@ -57,117 +57,37 @@ body {
   color: #000;
 }
 
-/* Container */
-.container {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.lead {
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-/* Plans table */
-.plans {
-  display: table;
+/* table */
+.plans-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
-.card {
-  display: table-cell;
-  vertical-align: top;
+.plans-table th,
+.plans-table td {
   border: 1px solid #f2d5c4;
-  padding: 1rem;
-  background-color: #fff;
-  width: 50%;
+  padding: 0.75rem;
+  text-align: center;
 }
 
-.card + .card {
-  border-left: none;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.plan-name {
-  font-size: 1.25rem;
+.plans-table th {
+  background-color: #fff7ed;
   font-weight: bold;
-  color: #a0522d;
-}
-
-.recommended {
-  background-color: #f97316;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  margin-left: 0.5rem;
 }
 
 .price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.features {
-  list-style: none;
-  margin: 1rem 0;
-  padding: 0;
-}
-
-.features li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.features svg {
-  margin-right: 0.5rem;
+  display: block;
+  font-size: 0.9rem;
   color: #a0522d;
-}
-
-/* Buttons */
-.cta {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
 }
 
 .btn-primary {
   background-color: #a0522d;
   color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #7a3f1d;
-}
-
-.btn-secondary {
-  background-color: #f2d5c4;
-  color: #333;
-}
-
-.btn-secondary:hover {
-  background-color: #e0bfa9;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 /* Footer */
