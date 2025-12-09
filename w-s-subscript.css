@@ -66,7 +66,7 @@ body {
 
 .plans-table th,
 .plans-table td {
-  border: 1px solid #f2d5c4;
+  border: 1px solid rgb(255, 255, 255);
   padding: 0.75rem;
   text-align: center;
 }
